@@ -525,6 +525,11 @@ void write_8(uint8_t x)
 #if 0
 #elif defined(ARDUINO_GENERIC_STM32F103C) || defined(ARDUINO_NUCLEO_F103C8) || defined(ARDUINO_BLUEPILL_F103C8)
 #warning Uno Shield on BLUEPILL
+//Standard BluePill wiring:
+//Port data |D7 |D6 |D5 |D4 |D3 |D2 |D1 |D0 |
+//Pin stm32 |PA7|PA6|PA5|PA4|PA3|PA2|PA1|PA0|
+//Control pins |RD |WR |RS |CS |RST|
+//Pin stm32    |PB0|PB6|PB7|PB8|PB9|
 #define RD_PORT GPIOB
 //#define RD_PIN  5
 #define RD_PIN  0  //hardware mod to Adapter.  Allows use of PB5 for SD Card
